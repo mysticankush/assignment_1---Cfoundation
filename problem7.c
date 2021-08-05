@@ -33,7 +33,7 @@ int main(){
         return 0;
     }
 
-    //iterate till file reaches to its end f end of file 
+    //check for all the strings till the end of the file 
     while(!feof(file)){
         
         fgets(strings, 302, file);
