@@ -10,7 +10,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>   
-#define MAX 300
 //function to find the lenght of the string
 int customstrlen(char* s)
 {
@@ -23,7 +22,7 @@ int customstrlen(char* s)
 }
 int main(){
 
-    char buffer[MAX];
+    char strings[302];
 
     FILE *file = fopen("file.txt", "r");
   
@@ -37,10 +36,10 @@ int main(){
     //iterate till file reaches to its end f end of file 
     while(!feof(file)){
         
-        fgets(buffer, MAX, file);
+        fgets(strings, 302, file);
         
-        if(customstrlen(buffer) >= 80)
-            printf("%s", buffer);
+        if(customstrlen(strings) >= 80)
+            printf("%s", strings);
             
     }
     
